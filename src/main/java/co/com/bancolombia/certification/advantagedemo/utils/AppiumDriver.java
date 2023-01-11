@@ -18,7 +18,7 @@ public class AppiumDriver {
     caps.setCapability("appPackage","com.Advantage.aShopping");
     caps.setCapability("appActivity","com.Advantage.aShopping.SplashActivity");
     caps.setCapability("app","");
-    AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("http://0.0.0.0:4723/wb/hub"), caps);
+    AndroidDriver<AndroidElement> driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), caps);
     return driver;
   }
 }

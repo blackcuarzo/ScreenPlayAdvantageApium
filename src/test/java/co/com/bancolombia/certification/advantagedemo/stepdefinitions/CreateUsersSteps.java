@@ -1,5 +1,7 @@
 package co.com.bancolombia.certification.advantagedemo.stepdefinitions;
 
+import co.com.bancolombia.certification.advantagedemo.models.CreateUserModel;
+import co.com.bancolombia.certification.advantagedemo.tasks.CreateUser;
 import co.com.bancolombia.certification.advantagedemo.utils.AppiumDriver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -9,6 +11,7 @@ import net.serenitybdd.screenplay.actors.Cast;
 import net.serenitybdd.screenplay.actors.OnStage;
 
 import java.net.MalformedURLException;
+import java.util.List;
 
 public class CreateUsersSteps {
     @Given("^I want to go to the page of Advantage Demo$")
@@ -21,8 +24,8 @@ public class CreateUsersSteps {
     }
 
     @When("^I enter the information to create the user$")
-    public void iEnterTheInformationToCreateTheUser() {
-
+    public void iEnterTheInformationToCreateTheUser(List<CreateUserModel> user) {
+        OnStage.theActorInTheSpotlight().attemptsTo(CreateUser.createUser(user));
     }
 
     @Then("^I validate the correct user was created$")
