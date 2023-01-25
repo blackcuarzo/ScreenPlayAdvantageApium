@@ -1,6 +1,6 @@
 package co.com.bancolombia.certification.advantagedemo.tasks;
 
-import co.com.bancolombia.certification.advantagedemo.userinterfaces.CreateUserPage;
+import co.com.bancolombia.certification.advantagedemo.userinterfaces.LoginPage;
 import co.com.bancolombia.certification.advantagedemo.userinterfaces.MainPage;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
@@ -11,7 +11,6 @@ import net.serenitybdd.screenplay.abilities.BrowsingTheWeb;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import org.openqa.selenium.Dimension;
-
 import java.util.List;
 
 import static co.com.bancolombia.certification.advantagedemo.userinterfaces.CreateUserPage.*;
@@ -33,7 +32,7 @@ public class CreateUser implements Task {
     actor.attemptsTo(
             Click.on(MainPage.BTN_MENU),
             Click.on(MainPage.LBL_LOGIN),
-            Click.on(MainPage.LBL_SIGNUP),
+            Click.on(LoginPage.LBL_SIGNUP),
             Enter.theValue(user.get(0).getUserName()).into(TXT_USERNAME),
             Enter.theValue(user.get(0).getEmail()).into(TXT_EMAIL),
             Enter.theValue(user.get(0).getPassword()).into(TXT_PASSWORD),
@@ -41,6 +40,7 @@ public class CreateUser implements Task {
             Enter.theValue(user.get(0).getFirstName()).into(TXT_FIRST_NAME),
             Enter.theValue(user.get(0).getLastName()).into(TXT_LAST_NAME),
             Enter.theValue(user.get(0).getPhoneNumber()).into(TXT_PHONE)
+
     );
     //Swipe
     double anchorPercentage = 0.5;
@@ -67,12 +67,6 @@ public class CreateUser implements Task {
             Enter.theValue(user.get(0).getZip()).into(TXT_ZIP),
             Click.on(BTN_REGISTER)
     );
-
-//    actor.attemptsTo(Enter.theValue(user.get(0).getUserName()).into(CreateUserPage.TXT_USERNAME));
-
-
-//    actor.attemptsTo();
-
   }
   public static CreateUser createUser(List<CreateUserModel> user){
     return instrumented(CreateUser.class, user);
