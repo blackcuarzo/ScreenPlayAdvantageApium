@@ -19,8 +19,6 @@ public class CreateUsersSteps {
         OnStage.setTheStage(Cast.ofStandardActors());
         OnStage.theActorCalled("Daniel Cano");
         OnStage.theActorInTheSpotlight().can(BrowseTheWeb.with(AppiumDriver.app()));;
-
-
     }
 
     @When("^I enter the information to create the user$")

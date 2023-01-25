@@ -9,6 +9,7 @@ public class CreateUserModel {
   private String password;
   private String confirmPassword;
   private String firstName;
+  private String lastName;
   private String phoneNumber;
   private String country;
   private String state;
@@ -17,12 +18,13 @@ public class CreateUserModel {
   private String zip;
 
 
-  public CreateUserModel(String userName, String email, String password, String confirmPassword, String firstName, String phoneNumber, String country, String state, String address, String city, String zip) {
+  public CreateUserModel(String userName, String email, String password, String confirmPassword, String firstName, String lastName, String phoneNumber, String country, String state, String address, String city, String zip) {
     this.userName = userName;
     this.email = email;
     this.password = password;
     this.confirmPassword = confirmPassword;
     this.firstName = firstName;
+    this.lastName = lastName;
     this.phoneNumber = phoneNumber;
     this.country = country;
     this.state = state;
@@ -51,6 +53,7 @@ public class CreateUserModel {
     return firstName;
   }
 
+  public String getLastName(){return lastName;}
   public String getPhoneNumber() {
     return phoneNumber;
   }
