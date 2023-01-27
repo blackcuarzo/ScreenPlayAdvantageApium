@@ -13,4 +13,4 @@ Feature: successfully create users
 
     Examples:
       | userName   | email                | password     | confirmPassword | firstName |lastName | phoneNumber | country  | state     | address  | city     | zip    |
-      | daniel1242 | daniel1245@gmail.com | 8917261ssaA$ | 8917261ssaA$    | Daniel    | Cano| 2662517     | Colombia | Antioquia | cll 8 76 | Medellin | 050010 |
+      | daniel1243 | daniel1245@gmail.com | 8917261ssaA$ | 8917261ssaA$    | Daniel    | Cano| 2662517     | Colombia | Antioquia | cll 8 76 | Medellin | 050010 |

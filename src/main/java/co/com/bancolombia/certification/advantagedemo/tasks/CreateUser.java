@@ -19,7 +19,7 @@ import static io.appium.java_client.touch.offset.PointOption.point;
 import static java.time.Duration.ofMillis;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class CreateUser implements Task {
+public class  CreateUser implements Task {
 
   private List<CreateUserModel> user;
 
